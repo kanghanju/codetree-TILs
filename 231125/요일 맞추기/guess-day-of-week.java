@@ -13,13 +13,13 @@ public class Main {
         String[] result = new String[]{"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
 
         int m2Day = 0;
-        for(int i=m2; i>0;i--){
+        for(int i=m2-1; i>0;i--){
             m2Day += day[i];
         }
         m2Day += d2;
 
         int m1Day = 0;
-        for(int i=m1;i>0; i--){
+        for(int i=m1-1;i>0; i--){
             m1Day += day[i];
         }
         m1Day += d1;
