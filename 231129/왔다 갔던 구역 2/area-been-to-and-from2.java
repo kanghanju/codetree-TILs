@@ -7,11 +7,13 @@ public class Main {
     public static void move(int dis,char dir){
         if(dir == 'L'){
             for(int i = 0; i < dis; i++){
-                arr[++pos] += 1;
+            	pos--;
+                arr[pos] += 1;
             }
         }else{
             for(int i = 0; i < dis; i++){
-                arr[--pos] += 1;
+                arr[pos] += 1;
+                pos++;
             }
         }
     }
