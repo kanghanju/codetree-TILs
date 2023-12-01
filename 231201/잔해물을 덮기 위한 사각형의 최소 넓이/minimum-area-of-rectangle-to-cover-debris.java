@@ -20,10 +20,12 @@ public class Main {
 
         int minRow = 2000,minCol = 2000;
         int maxRow = 0,maxCol = 0;
+        boolean isTrue = false;
 
         for(int i = 0; i < 2001; i++){
                 for(int j = 0; j < 2001; j++){
                     if(grid[i][j]==1){
+                        isTrue = true;
                         minRow = Math.min(minRow,i);
                         minCol = Math.min(minCol,j);
                         maxRow = Math.max(maxRow,i);
@@ -34,7 +36,11 @@ public class Main {
 
         //System.out.println("minRow: "+minRow+",minCol:"+minCol+",maxRow:"+maxRow+",maxCol:"+maxCol);
 
-        System.out.println((maxRow-minRow+1)*(maxCol-minCol+1));
+        if(isTrue){
+            System.out.println((maxRow-minRow+1)*(maxCol-minCol+1));
+        }else{
+            System.out.println("0");
+        }
 
     }
 }
