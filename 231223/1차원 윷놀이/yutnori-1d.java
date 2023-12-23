@@ -45,7 +45,7 @@ public class Main {
             score[horse]+= move[i];
         }
 
-        for(int i = 1; i < score.length-1; i++ ){
+        for(int i = 1; i < score.length; i++ ){
             if(score[i] >= m-1){
                 ans++;
                 max = Math.max(ans,max);
