@@ -19,7 +19,7 @@ public class Main {
         }
 
         for(int i = 1; i <= k; i++){
-            if(num >= 2 && arr.get(i-2) == arr.get(i-1) && arr.get(i-1) == arr.get(i)){
+            if(num > 2 && i == arr.get(arr.size()-1) && i == arr.get(arr.size()-2)){
                 continue;
             }
             arr.add(i);
@@ -34,4 +34,6 @@ public class Main {
         }
         System.out.println();
     }
+
+
 }
