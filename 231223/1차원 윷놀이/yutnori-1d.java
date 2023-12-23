@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main {
-    static int n,m,k;
+   static int n,m,k;
     static int[] move;
     static int max = 0;
 
@@ -9,9 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        m = sc.nextInt();
-        k = sc.nextInt();
+        n = sc.nextInt(); //n번의 턴
+        m = sc.nextInt(); //칸의 개수
+        k = sc.nextInt(); //말의 개수
 
         move = new int[n];
         for(int i = 0; i < n; i++){
@@ -23,7 +23,7 @@ public class Main {
 
     }
 
-    public static void choose(int num){
+    public static void choose(int num){//조합만들기
         if(num == n+1){
             countScore();
             return;
@@ -37,7 +37,7 @@ public class Main {
     }
 
     public static void countScore(){
-        int[] score = new int[n+1];
+        int[] score = new int[k+1]; //말 당 점수를 기록
         int ans = 0;
 
         for(int i = 0; i < arr.size(); i++){
@@ -45,8 +45,8 @@ public class Main {
             score[horse]+= move[i];
         }
 
-        for(int i = 1; i < n+1; i++ ){
-            if(score[i] >= m){
+        for(int i = 1; i < score.length-1; i++ ){
+            if(score[i] >= m-1){
                 ans++;
                 max = Math.max(ans,max);
             }
